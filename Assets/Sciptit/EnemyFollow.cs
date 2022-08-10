@@ -9,6 +9,7 @@ public class EnemyFollow : MonoBehaviour
 {
     public NavMeshAgent enemy;
     public Transform Player;
+    public GameObject gameObject;
 
     void Start()
     {
@@ -26,7 +27,7 @@ public class EnemyFollow : MonoBehaviour
  
         if (collision.gameObject.tag == "Vihollinen")
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
 
     }
