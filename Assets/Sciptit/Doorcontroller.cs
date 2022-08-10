@@ -13,7 +13,7 @@ public class Doorcontroller : MonoBehaviour
         {
             Door.transform.Translate(Vector3.up * Time.deltaTime * 5);
         }
-        if (Door.transform.position.y > 9f)
+        if (Door.transform.position.y > 4f)
         {
             doorIsOpening = false;
         }
