@@ -7,24 +7,29 @@ using UnityEngine.SceneManagement;
 
 public class EnemyFollow : MonoBehaviour
 {
-    public NavMeshAgent enemy;
+    public NavMeshAgent Enemy;
     public Transform Player;
-    public GameObject pelaaja;
-  
+
+
+    void Update()
+    {
+        Enemy.SetDestination(Player.position);
+    }
+
 
     void OnCollisionEnter(Collision col)
     {
         if (col.gameObject.name == "Player")
         {
+            SceneManager.LoadScene(1);
         }
+        if (col.gameObject.name == "Vihollinen")
+        {
+            SceneManager.LoadScene(1);
 
+        }
     }
 
-
-    void Update()
-    {
-        enemy.SetDestination(Player.position);
-    }
 
 
 
